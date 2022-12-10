@@ -1,0 +1,543 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background-color: #E8E6EF;
+    ;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+    padding: 20px 50px;
+    transition: .5s;
+}
+
+#header h1{
+    font-family: 'Poppins';
+}
+
+header nav ul{
+    display: flex;
+    list-style: none;
+}
+header nav ul li{
+    margin: 10px 15px;
+}
+nav ul li .linea{
+    display: block;
+    background-color: #FA3852;
+    height: 2px;
+    width: 0%;
+    transition: .5s;
+}
+header nav ul li:hover .linea{
+    width: 100%;
+}
+header nav ul li a{
+    text-decoration-line: none;
+    color: #000;
+}
+
+header nav ul li span.seleccionado {
+    display: block;
+    background-color: #FA3852;
+    height: 2px;
+}
+
+.contact-btn{
+    display: inline-block;
+    font-size: 16px;
+    text-decoration-line: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    border: 2px solid #FA3852;
+    padding: 10px 30px;
+    border-radius: 50px;
+    background-color: #FA3852;
+    color: #fff;
+    transition: .40s;
+}
+.contact-btn:hover{
+    border-color: #FA3852;
+    color: #000; 
+    background-color: transparent;
+}
+
+.menu-fixed{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    max-width: 1000px;
+}
+
+#inicio {
+    position: relative;
+    height: 100vh;
+    padding: 0 40px;
+}
+#inicio .contenido{
+    max-width: 1500px;
+    margin: auto;
+    height: 100%;
+}
+#inicio .contenido .info{
+    position: relative;
+    top: 50%;
+    left: 45%;
+    width: 50%;
+    text-align: center;
+    transform: translateY(-50%);
+    z-index: 10;
+    animation: aparecer 2s forwards;
+}
+
+@keyframes aparecer{
+    0%{
+        margin-left: -30px;
+        opacity: 0;
+    }
+    100%{
+        margin-left: 0;
+        opacity: 1;
+    }
+}
+
+#inicio .contenido .info h3{
+    font-size: 45px;
+    color: #FA3852;
+    -webkit-text-stroke: 1px #4c4c4c;
+    padding-left: 2px;
+    text-shadow: 1px 2px #4c4c4c;
+    letter-spacing: 4px;
+}
+
+#inicio .contenido .info span{
+    display: inline-block;
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.redes {
+    position: absolute;
+    top: 56%;
+    padding: 0 5%;
+    right: 10px;
+    transform: translateY(-50%);
+    z-index: 99;
+}
+.redes a{
+    display: block;
+    margin: 28px 0;
+    font-size: 25px;
+    transition: .40s;
+}
+.redes a:hover{
+    transform: translateX(-55%)
+}
+
+#inicio .contenedor-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50% ;
+    height: 100vh;
+    clip-path: ellipse(90% 90% at left);
+}
+#inicio .contenedor-img .imagen {
+    background-image: url("Taller CSS/InicioC.jpg");
+    background-size: cover;
+    width: 100% ;
+    height: 100vh;
+    background-position: center;
+}
+
+#sobremi .contenido {
+    padding: 70px 30px;
+    padding-top: 110px;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+}
+
+#sobremi .contenido .left {
+    width: 50%;
+}
+#sobremi .contenido .left .contenedor-img {
+    max-width: 500px;
+}
+#sobremi .contenido .left .contenedor-img img {
+    width: 100%;
+}
+
+#sobremi .contenido .right {
+    width: 100%;
+    padding-left: 50px;
+}
+#sobremi .contenido .right .info span {
+    display: inline-block;
+    background-color: #f2f2f2;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+#sobremi .contenido .right .info h3 {
+    font-size: 30px;
+    line-height: 1.4;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+#sobremi .contenido .right .info p {
+    font-size: 15px;
+    color: #767676;
+    line-height: 30px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+#sobremi .contenido-i {
+    max-width: 1200px;
+    margin: auto;
+}
+#sobremi .contenido-i .texto h3 {
+    font-size: 30px;
+    font-family: 'Montserrat';
+    text-align: center;    
+}
+#sobremi .contenido-i .contenedor-in {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px 0;
+}
+
+#sobremi .contenido-i .contenedor-in .interes{
+    width: 100px;
+    height: 100px;
+    background-color: darkgray;
+    border-radius: 10px;
+    margin: 0 15px 15px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+#sobremi .contenido-i .contenedor-in .interes:hover{
+    background-color: #FA3852;
+}
+#sobremi .contenido-i .contenedor-in .interes i {
+    font-size: 30px;
+    background-color: transparent;
+}
+#sobremi .contenido-i .contenedor-in .interes span {
+    background-color: transparent    
+}
+
+.skills{
+    padding: 50px 20px;
+}
+.skills .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.skills .contenido-seccion .texto span{
+    display: block;
+    margin-bottom: 15px;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Montserrat';
+}
+.skills .contenido-seccion span{
+    display: block;
+    margin-bottom: 15px;
+}
+
+.skills .fila{
+    display: flex;
+}
+.skills .fila .col{
+    width: 50%;
+    padding: 0 20px;
+}
+.skills .fila .col h3{
+    font-size: 28px;
+    font-family: 'Montserrat';
+    margin-bottom: 25px;
+}
+
+.skills .skill .barra-skill{
+    height: 8px;
+    width: 80%;
+    background-color: darkgray;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.skills .skill .progreso{
+    background-color: #FA3852;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+}
+
+.skills .skill .barra-skill span{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: #FA3852;
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+    top: -17px;
+    right: -15px;
+    font-size: 14px;
+}
+
+.skills .skill .javascript{
+    width: 0%;
+    animation: 2s javascript forwards;
+}
+
+@keyframes javascript {
+    0%{width: 0%;}
+    100%{width: 25%;}
+}
+
+.skills .skill .htmlcss{
+    width: 0%;
+    animation: 2s htmlcss forwards;
+}
+@keyframes htmlcss {
+    0%{width: 0%;}
+    100%{width: 40%;}
+}
+
+.skills .skill .java{
+    width: 0%;
+    animation: 2s java forwards;
+}
+@keyframes java {
+    0%{width: 0%;}
+    100%{width: 35%;}
+}
+
+.skills .skill .python{
+    width: 0%;
+    animation: 2s python forwards;
+}
+@keyframes python {
+    0%{width: 0%;}
+    100%{width: 30%;}
+}
+
+.skills .skill .c{
+    width: 0%;
+    animation: 2s c forwards;
+}
+@keyframes c {
+    0%{width: 0%;}
+    100%{width: 45%;}
+}
+
+.skills .skill .comunicacion{
+    width: 0%;
+    animation: 2s comunicacion forwards;
+}
+@keyframes comunicacion {
+    0%{width: 0%;}
+    100%{width: 75%;}
+}
+
+.skills .skill .trabajo{
+    width: 0%;
+    animation: 2s trabajo forwards;
+}
+@keyframes trabajo {
+    0%{width: 0%;}
+    100%{width: 70%;}
+}
+
+.skills .skill .liderazgo{
+    width: 0%;
+    animation: 2s liderazgo forwards;
+}
+@keyframes liderazgo {
+    0%{width: 0%;}
+    100%{width: 85%;}
+}
+
+.skills .skill .dedicacion{
+    width: 0%;
+    animation: 2s dedicacion forwards;
+}
+@keyframes dedicacion {
+    0%{width: 0%;}
+    100%{width: 90%;}
+}
+
+.skills .skill .gestion{
+    width: 0%;
+    animation: 2s gestion forwards;
+}
+@keyframes gestion {
+    0%{width: 0%;}
+    100%{width: 70%;}
+}
+
+.portafolio {
+    padding: 150px 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+.portafolio span {
+    display: inline-block;
+    background-color: #f2f2f2;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+#portafolio {
+	padding: 90px 0;
+}
+
+.portafolio-row {
+	display: flex;
+    justify-content: space-between;
+}
+
+.portafolio-row-box {
+	margin: 20px;
+	background: #E8E6EF;
+	box-shadow: 10px 10px 10px #0000001a;
+}
+.portafolio-row-box img {
+	width: 100%;
+    display: block;
+}
+.portafolio-row-box p {
+	text-align: center;
+	padding: 20px;
+	margin-top: 0;
+}
+
+.contacto{
+    padding: 0px 0;
+}
+.contacto .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.contacto h2{
+    font-size: 48px;
+    font-family: 'Montserrat';
+    text-align: center;
+    padding-top: 80px;
+}
+.contacto .fila{
+    display: flex;
+    padding-top: 50px;
+}
+.contacto .col{
+    width: 50%;
+    padding: 10px;
+    position: relative;
+}
+.contacto .col input, .contacto .col textarea{
+    display: block;
+    width: 100%;
+    padding: 18px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: whitesmoke;
+    font-size: 18px;
+}
+.contacto button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #000;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #000;
+    position: relative;
+    z-index: 10;
+}
+.contacto button i {
+    background-color: transparent;
+}
+.contacto button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #FA3852;
+    z-index: -1;
+    transition: 1s;
+}
+.contacto button:hover .overlay{
+    width: 100%;
+}
+
+.contacto .cardContacto {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    margin: 113px;
+}
+.contacto .cardContacto .card {
+    position: relative;
+    width: 300px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FA3852;
+    padding: 30px;
+    margin: 30px;
+}
+.contacto .cardContacto .card .iconoCard {
+    color: #000;
+    padding-right: 15px;
+    font-size: 30px;
+    background-color: #FA3852;
+}
+.contacto .cardContacto .card .iconoCard i {
+    background-color: #FA3852;
+}
+.contacto .cardContacto .card .contenidoCard p {
+    font-weight: 600;
+    background-color: #FA3852;
+}
+
+footer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ footer p {
+    color: #000;
+    font-weight: 500;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
